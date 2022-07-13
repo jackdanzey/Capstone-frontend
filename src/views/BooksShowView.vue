@@ -56,7 +56,7 @@ export default {
 
 <template>
   <div class="home">
-    <h1>{{ book.name }}</h1>
+    <h2>{{ book.name }}</h2>
     <p>Rating: {{ book.rating }}</p>
     <img v-bind:src="book.image" v-bind:alt="book.name" />
     <form v-on:submit.prevent="createRating()" v-bind:key="book.id">
@@ -84,8 +84,12 @@ export default {
 </template>
 
 <style>
+.home {
+  padding-top: 75px;
+  max-width: 40%;
+}
 img {
-  width: 20%;
+  max-width: 20%;
   height: auto;
 }
 </style>
