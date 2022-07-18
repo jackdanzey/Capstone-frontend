@@ -47,3 +47,9 @@ export default {
     </form>
   </div>
 </template>
+<style>
+.login {
+  padding-top: 100px;
+  text-align: center;
+}
+</style>

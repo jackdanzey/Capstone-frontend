@@ -68,7 +68,7 @@ export default {
       <input type="text" v-model="newRateParams.score" />
       <input type="submit" value="Submit" />
     </form>
-    <form v-on:submit.prevent="createPost()" v-bind:key="book.id">
+    <form class="bar" v-on:submit.prevent="createPost()" v-bind:key="book.id">
       <img v-if="errors.length > 0" v-bind:src="`https://http.cat/${errorStatus}`" />
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
@@ -76,9 +76,21 @@ export default {
       <strong>New Comment:</strong>
       <input type="text" v-model="newPostParams.comment" />
       <input type="submit" value="Submit" />
+      <p></p>
     </form>
-    <div v-for="post in book.posts.reverse()" v-bind:key="post.id">
-      <p>{{ post.user.name + " said: " + post.comment }}</p>
+
+    <div class="row icon-boxes">
+      <div class="row-md-6 row-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box">
+          <!-- <div class="icon"><i class="ri-palette-line"></i></div> -->
+          <div v-for="post in book.posts.reverse()" v-bind:key="post.id">
+            <h4 class="title">
+              <a href="">{{ post.user.name + ":" }}</a>
+            </h4>
+            <p class="description">{{ post.comment }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -86,10 +98,23 @@ export default {
 <style>
 .home {
   padding-top: 75px;
-  max-width: 40%;
+  max-width: 30%;
+  /* text-align: center; */
+  margin-left: auto;
+  margin-right: auto;
 }
+/* .icon-box {
+  margin-left: 30px;
+} */
+/* .comments {
+  border-bottom: 2px solid #0287ec;
+} */
 img {
   max-width: 20%;
   height: auto;
+}
+.bar {
+  border-bottom: 2px solid #080808;
+  margin-bottom: 30px;
 }
 </style>

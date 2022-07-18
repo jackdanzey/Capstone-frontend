@@ -36,7 +36,7 @@ export default {
   <section id="hero" class="d-flex align-items-center">
     <div class="books container position-relative" data-aos="fade-up" data-aos-delay="100">
       <div class="row justify-content-center">
-        <p>
+        <div class="search">
           Search by title
           <input type="text" v-model="nameFilter" list="titles" />
           <datalist id="titles">
@@ -53,7 +53,7 @@ export default {
             </div>
           </datalist>
           <button v-on:click="sortByTitle()">Sort by title</button>
-        </p>
+        </div>
       </div>
       <!-- <div v-for="book in books" v-bind:key="book.id">
       <p>Title: {{ book.name }}</p>
@@ -83,7 +83,7 @@ export default {
           <div class="icon-box">
             <p>Title: {{ book.name }}</p>
             <p>Rating: {{ book.rating }}</p>
-            <p><router-link v-bind:to="`/books/${book.id}`">More details</router-link></p>
+            <p><router-link v-bind:to="`/books/${book.id}`">See Book Page</router-link></p>
             <img v-bind:src="book.image" v-bind:alt="book.image" />
           </div>
         </div>
@@ -93,7 +93,10 @@ export default {
 </template>
 
 <style>
-/* .books {
+#hero {
+  padding-top: 100px;
+}
+/* .row {
   padding-top: 50px;
 } */
 img {

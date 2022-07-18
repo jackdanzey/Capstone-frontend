@@ -47,17 +47,17 @@
     </div>
   </header>
   <!-- End Header -->
-  <router-link to="/">Home</router-link>
+  <!-- <router-link to="/">Home</router-link>
   |
   <router-link to="/books">Books</router-link>
-  |
+  | -->
   <!-- <router-link to="/books-show">See a Book</router-link> -->
-  |
-  <router-link to="/signup">Signup</router-link>
+  <!-- | -->
+  <!-- <router-link to="/signup">Signup</router-link>
   |
   <router-link to="/login">Login</router-link>
   |
-  <router-link to="logout">Logout</router-link>
+  <router-link to="logout">Logout</router-link> -->
   <router-view />
   <footer id="footer">
     <div class="footer-top">

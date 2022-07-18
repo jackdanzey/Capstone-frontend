@@ -51,3 +51,11 @@ export default {
     </form>
   </div>
 </template>
+<style>
+.signup {
+  padding-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+</style>
